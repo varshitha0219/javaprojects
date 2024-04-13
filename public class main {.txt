@@ -1,0 +1,34 @@
+public class main {
+public static void main (String[] args){
+String url ="jdbc:mysql://localhost::3386/root12";
+String unname ="root";
+String pwd ="root";
+String query ="update Student set marks=? where stud_name=?";
+try {
+Connection c = DriverManager.getConnection(url, uname, pwd);
+Statement s = c.createStatement();
+PreparedStatement pstmt = c.PreparedStatement(query);
+pstmt.setInt(11,23);
+pstmt.setString(2,"Ravi");
+int rowsEffected = pstmt.executeUpdate();
+System.out.println(rowsEffected);
+ResultSet rs = s.executeQuery("select *from Student");
+System.out.println("stud_id\tstud_name\tmarks\tskill");
+while(rs.next())
+{
+int id =rs.getIn("stud_id");
+String name =rs.getString("stud_name");
+int marks = rs.getInt("marks");
+String skill =rs.getString("skill");
+System.out.println(id+" "+name+" "+marks+" "+skill);
+}
+rs.close();
+s.close();
+c.close();
+}
+catch(Exception e)
+{
+e.printStackTrace();
+}
+}
+}

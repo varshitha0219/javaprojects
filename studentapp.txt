@@ -1,0 +1,32 @@
+public class StudentApp
+{
+int rollNo;
+String name;
+String branch;
+String collegeName;
+public static void main(String[] args)
+{
+StudentApp varshi=new StudentApp();
+StudentApp sathish=new StudentApp();
+StudentApp nikhil=new StudentApp();
+StudentApp samyu=new StudentApp();
+
+varshi.rollNo=123;
+varshi.branch="cse";
+varshi.collegeName="Spec";
+sathish.rollNo=133;
+sathish.branch="ece";
+sathish.collegeName="Spec";
+nikhil.rollNo=143;
+nikhil.branch="cse";
+nikhil.collegeName="Spec";
+samyu.rollNo=153;
+samyu.branch="ece";
+samyu.collegeName="Spec";
+
+System.out.println(varshi.rollNo+" "+varshi.branch+" "+varshi.collegeName);
+System.out.println(sathish.rollNo+" "+sathish.branch+" "+sathish.collegeName);
+System.out.println(nikhil.rollNo+" "+nikhil.branch+" "+nikhil.collegeName);
+System.out.println(samyu.rollNo+" "+samyu.branch+" "+samyu.collegeName);
+}
+}
